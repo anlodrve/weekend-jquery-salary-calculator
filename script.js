@@ -8,7 +8,7 @@ $(document).ready(onReady);
 let employees = [];
 let totalSalary = 0;
 let totalSalary_rounded = 0;
-let sound = $('#soundEffect')[0];
+
 
 function onReady(){
     console.log('on Ready');
@@ -72,7 +72,7 @@ function calculateTotalSalary(){
     console.log(totalSalary_rounded);
     render();
 }
-
+let sound = new Audio('/Users/andrealove/Documents/PrimeAcademy/Tier2/Week6/weekend-jquery-salary-calculator/cashier-quotka-chingquot-sound-effect-129698.mp3')
 function playAudio(){
    sound.play();
 }
