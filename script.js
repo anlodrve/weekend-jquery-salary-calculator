@@ -62,10 +62,11 @@ function calculateTotalSalary(){
     totalSalary = 0;
     for(let employee of employees){
         totalSalary += (employee.salary/12);
+        totalSalary_rounded = totalSalary.toFixed(2);
         console.log('this employee', employee, 'and their salary is', employee.salary, 'and total salary is', totalSalary)
     }
   
-    console.log(totalSalary);
+    console.log(totalSalary_rounded);
     render();
 }
 
@@ -101,7 +102,7 @@ function render(){
     //want to display total employee salary
     if(totalSalary > 0){
         $('#totalEmployeeSalary').append(` 
-           <h2> Total Monthly Costs: ${totalSalary} </h2>
+           <h2> Total Monthly Costs: ${totalSalary_rounded} </h2>
         `);
     }
    
