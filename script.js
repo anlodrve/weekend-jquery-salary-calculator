@@ -8,6 +8,7 @@ $(document).ready(onReady);
 let employees = [];
 let totalSalary = 0;
 let totalSalary_rounded = 0;
+let sound = $('#soundEffect')[0];
 
 function onReady(){
     console.log('on Ready');
@@ -17,6 +18,7 @@ function onReady(){
 
     $('#addSalaryForm').on('submit', addEmployee); 
     $('#addSalaryForm').on('submit', calculateTotalSalary); 
+    $('#addSalaryForm').on('submit', playAudio);
 
     //handle delete button
     $(document).on('click', '.deleteEmployee', onDeleteEmployee);
@@ -69,6 +71,10 @@ function calculateTotalSalary(){
   
     console.log(totalSalary_rounded);
     render();
+}
+
+function playAudio(){
+   sound.play();
 }
 
 function render(){
