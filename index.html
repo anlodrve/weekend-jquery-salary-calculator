@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./jquery.js"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Salary Calculator</title>
+</head>
+<header>
+    <h1>Salary Calculator</h1>
+</header>
+
+<body>
+    <h2>Add Employee</h2>
+    <div>
+        <form id="addSalaryForm">
+            <div>
+                <label for="firstNameInput">First Name:</label>
+                <input id="firstNameInput" type="text" placeholder="First Name" />
+            </div>
+            <div>
+                <label for="lastNameInput">Last Name:</label>
+                <input id="lastNameInput" type="text" placeholder="Last Name" />
+            </div>
+            <div>
+                <label for="idInput">ID:</label>
+                <input id="idInput" type="number" placeholder="Employee ID Number" />
+            </div>
+            <div>
+                <label for="titleInput">Title:</label>
+                <input id="titleInput" type="text" placeholder="Title" />
+            </div>
+            <div>
+                <label for="salaryInput">Annual Salary:</label>
+                <input id="salaryInput" type="text" placeholder="Annual Salary" />
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <h2>Employees</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Annual Salary</th>
+            </tr>
+        </thead>
+        <tbody id="employee-table">
+            <!--Actual table rows go here-->
+        </tbody>
+    </table>
+    <div>
+        <h2>Total Monthly Costs</h2>
+        <p id="totalEmployeeSalary"></p>
+        <!---this is where Employee Salary Total will go-->
+    </div>
+</body>
+
+</html>
