@@ -58,7 +58,6 @@ function addEmployee(event) {
 
 }
 
-
 function calculateTotalSalary(){
     totalSalary = 0;
     for(let employee of employees){
@@ -75,6 +74,7 @@ function render(){
 
     //empty old data
     $('#employee-table').empty();
+    $('#totalEmployeeSalary').empty();
 
     //show new data
      //render each emplyee object as a <tr>
@@ -100,11 +100,11 @@ function render(){
 
     //want to display total employee salary
     if(totalSalary > 0){
-    $('#totalEmployeeSalary').empty();
-    $('#totalEmployeeSalary').append(`
-        ${totalSalary}
-   `)
+        $('#totalEmployeeSalary').append(` 
+           <h2> Total Monthly Costs: ${totalSalary} </h2>
+        `);
     }
+   
     
 
 
