@@ -7,6 +7,7 @@ $(document).ready(onReady);
 //state
 let employees = [];
 let totalSalary = 0;
+let totalSalary_rounded = 0;
 
 function onReady(){
     console.log('on Ready');
@@ -99,17 +100,18 @@ function render(){
         `)
     } //end for loop
 
+      if(totalSalary_rounded > 20000) {
+            $('#totalEmployeeSalary').css('background-color', 'red');
+         }
+      else if(0 < totalSalary_rounded < 20000) {
+            $('#totalEmployeeSalary').css('background-color', 'inherit');
+        } 
     //want to display total employee salary
-    if(totalSalary > 0){
         $('#totalEmployeeSalary').append(` 
            <h2> Total Monthly Costs: ${totalSalary_rounded} </h2>
         `);
-    }
-   
-    
 
+      
+     }
+ 
 
-
-
-
-}
